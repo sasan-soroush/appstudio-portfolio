@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://sasan-soroush.github.io",
-  base: "/appstudio-portfolio.git",
+  base: "/appstudio-portfolio",
   build: {
     assets: "assets",
   },
