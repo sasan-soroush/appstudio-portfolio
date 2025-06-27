@@ -1,0 +1,599 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import EmailForm from '../components/EmailForm.astro';
+---
+
+<Layout title="AppStudio - Premium Mobile Apps" description="We create amazing mobile apps that users love. Discover our portfolio of innovative iOS and Android applications.">
+  <Header variant="studio" />
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            We Create <span class="gradient-text">Amazing</span><br>
+            Mobile Experiences
+          </h1>
+          <p class="hero-description">
+            Premium mobile apps that combine beautiful design with powerful functionality. 
+            Join millions of users who trust our innovative solutions.
+          </p>
+          <div class="hero-actions">
+            <a href="#apps" class="btn btn-primary btn-lg">
+              Explore Our Apps
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-secondary btn-lg">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-mockup">
+            <img src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=400&h=800&fit=crop" alt="Mobile App Interface" class="hero-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps Portfolio Section -->
+  <section id="apps" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Our App Portfolio</h2>
+        <p class="text-lg text-gray">Discover our collection of award-winning mobile applications</p>
+      </div>
+      
+      <div class="apps-grid">
+        <article class="app-card">
+          <div class="app-icon">
+            <div class="icon-gradient icon-taskflow">
+              <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="app-info">
+            <h3>TaskFlow Pro</h3>
+            <p>Advanced task management with smart automation and team collaboration features.</p>
+            <div class="app-stats">
+              <span class="stat">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                4.9
+              </span>
+              <span class="stat">500K+ Downloads</span>
+            </div>
+            <a href="/taskflow" class="btn btn-primary">Learn More</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">
+            <div class="icon-gradient icon-mindspace">
+              <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9.5L21 9ZM3 7V9L9 9.5V7.5L3 7ZM15 7.5V16C15 17.1 14.1 18 13 18H11C9.9 18 9 17.1 9 16V7.5C9 6.4 9.9 5.5 11 5.5H13C14.1 5.5 15 6.4 15 7.5Z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="app-info">
+            <h3>MindSpace</h3>
+            <p>Meditation and mindfulness app with personalized sessions and progress tracking.</p>
+            <div class="app-stats">
+              <span class="stat">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                4.8
+              </span>
+              <span class="stat">250K+ Downloads</span>
+            </div>
+            <a href="/mindspace" class="btn btn-primary">Learn More</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-icon">
+            <div class="icon-gradient icon-fittrack">
+              <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
+                <path d="M15.5 5H13.5L11.5 3C11.2 2.7 10.8 2.7 10.5 3L8.5 5H6.5C5.4 5 4.5 5.9 4.5 7V19C4.5 20.1 5.4 21 6.5 21H17.5C18.6 21 19.5 20.1 19.5 19V7C19.5 5.9 18.6 5 17.5 5H15.5ZM12 18C9.8 18 8 16.2 8 14S9.8 10 12 10S16 11.8 16 14S14.2 18 12 18ZM12 12C10.9 12 10 12.9 10 14S10.9 16 12 16S14 15.1 14 14S13.1 12 12 12Z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="app-info">
+            <h3>FitTrack Elite</h3>
+            <p>Comprehensive fitness tracking with AI-powered workout recommendations.</p>
+            <div class="app-stats">
+              <span class="stat">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                4.7
+              </span>
+              <span class="stat">1M+ Downloads</span>
+            </div>
+            <a href="/fittrack" class="btn btn-primary">Learn More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section bg-gradient">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p class="text-lg">
+            Founded in 2020, AppStudio has been at the forefront of mobile innovation, 
+            creating apps that seamlessly blend cutting-edge technology with intuitive design.
+          </p>
+          <p>
+            Our team of passionate developers, designers, and product experts work tirelessly 
+            to deliver experiences that not only meet user needs but exceed expectations. 
+            With over 2 million downloads across our app portfolio, we're proud to be trusted 
+            by users worldwide.
+          </p>
+          
+          <div class="achievements">
+            <div class="achievement">
+              <h3 class="achievement-number">2M+</h3>
+              <p class="achievement-label">Total Downloads</p>
+            </div>
+            <div class="achievement">
+              <h3 class="achievement-number">4.8</h3>
+              <p class="achievement-label">Average Rating</p>
+            </div>
+            <div class="achievement">
+              <h3 class="achievement-number">15+</h3>
+              <p class="achievement-label">Awards Won</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-visual">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Our Development Team" class="about-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="newsletter-section">
+        <div class="newsletter-content">
+          <h2>Stay in the Loop</h2>
+          <p class="text-lg text-gray">
+            Be the first to know about new app launches, updates, and exclusive features.
+          </p>
+        </div>
+        <EmailForm 
+          title="Join Our Community"
+          description="Get exclusive updates and early access to new features"
+          placeholder="Enter your email"
+          buttonText="Subscribe Now"
+          variant="compact"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-section">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p class="text-lg">
+            Have questions or want to discuss a potential partnership? 
+            We'd love to hear from you.
+          </p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>hello@appstudio.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Office</h4>
+                <p>San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-wrapper">
+          <div class="contact-form">
+            <h3>Send us a message</h3>
+            <form class="message-form">
+              <div class="form-row">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+              </div>
+              <input type="text" placeholder="Subject" required>
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer variant="studio" />
+</Layout>
+
+<style>
+  .hero {
+    position: relative;
+    padding: var(--spacing-20) 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-6);
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-8);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phone-mockup {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background: #1a1a1a;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-12);
+  }
+
+  .section-header h2 {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-8);
+  }
+
+  .app-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-8);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-gray-200);
+  }
+
+  .app-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--box-shadow-lg);
+    border-color: var(--color-primary);
+  }
+
+  .app-icon {
+    margin-bottom: var(--spacing-6);
+  }
+
+  .icon-gradient {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-taskflow {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .icon-mindspace {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+
+  .icon-fittrack {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+
+  .app-info h3 {
+    color: var(--color-gray-800);
+    margin-bottom: var(--spacing-3);
+  }
+
+  .app-info p {
+    color: var(--color-gray-600);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .app-stats {
+    display: flex;
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+    align-items: center;
+  }
+
+  .stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+  }
+
+  .stat svg {
+    color: #FFD700;
+  }
+
+  .bg-gradient {
+    background: linear-gradient(135deg, var(--color-gray-50) 0%, white 100%);
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+  }
+
+  .about-text h2 {
+    margin-bottom: var(--spacing-6);
+  }
+
+  .achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
+  }
+
+  .achievement {
+    text-align: center;
+    padding: var(--spacing-4);
+  }
+
+  .achievement-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .achievement-label {
+    color: var(--color-gray-600);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+  }
+
+  .newsletter-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+    padding: var(--spacing-12);
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+  }
+
+  .newsletter-content h2 {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+  }
+
+  .contact-methods {
+    margin-top: var(--spacing-8);
+  }
+
+  .contact-method {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-method h4 {
+    margin-bottom: var(--spacing-1);
+    color: var(--color-gray-800);
+  }
+
+  .contact-method p {
+    margin: 0;
+    color: var(--color-gray-600);
+  }
+
+  .contact-form-wrapper {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+
+  .contact-form {
+    padding: var(--spacing-8);
+  }
+
+  .contact-form h3 {
+    margin-bottom: var(--spacing-6);
+    color: var(--color-gray-800);
+  }
+
+  .message-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4);
+  }
+
+  .message-form input,
+  .message-form textarea {
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  .message-form input:focus,
+  .message-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .message-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .phone-mockup {
+      width: 250px;
+      height: 500px;
+    }
+
+    .apps-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+    }
+
+    .achievements {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-4);
+    }
+
+    .newsletter-section {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-6);
+      text-align: center;
+    }
+
+    .contact-section {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

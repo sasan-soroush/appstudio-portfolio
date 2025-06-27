@@ -1,0 +1,303 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  placeholder?: string;
+  buttonText?: string;
+  variant?: 'default' | 'compact';
+}
+
+const { 
+  title = "Stay Updated",
+  description = "Get notified about new features and updates",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe",
+  variant = 'default'
+} = Astro.props;
+---
+
+<div class={`email-form-container ${variant}`}>
+  <form class="email-form" id="emailForm">
+    <div class="form-header">
+      <h3 class="form-title">{title}</h3>
+      <p class="form-description">{description}</p>
+    </div>
+    
+    <div class="form-fields">
+      <div class="field-group">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name (optional)"
+          class="form-input"
+          id="nameInput"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder={placeholder}
+          class="form-input"
+          required
+          id="emailInput"
+        />
+      </div>
+      
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="consent" required class="checkbox-input">
+          <span class="checkbox-custom"></span>
+          <span class="checkbox-text">
+            I agree to receive updates and promotional emails. You can unsubscribe at any time.
+            <a href="#privacy" class="privacy-link">Privacy Policy</a>
+          </span>
+        </label>
+      </div>
+      
+      <button type="submit" class="btn btn-primary btn-lg form-submit">
+        <span class="submit-text">{buttonText}</span>
+        <div class="loading-spinner" style="display: none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-dasharray="60" stroke-dashoffset="60">
+              <animate attributeName="stroke-dashoffset" dur="2s" values="60;0" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+      </button>
+    </div>
+    
+    <div class="form-message" id="formMessage" style="display: none;"></div>
+  </form>
+</div>
+
+<style>
+  .email-form-container {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+    padding: var(--spacing-8);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .email-form-container.compact {
+    padding: var(--spacing-6);
+    box-shadow: var(--box-shadow);
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+  }
+
+  .form-title {
+    margin-bottom: var(--spacing-2);
+    color: var(--color-gray-800);
+  }
+
+  .form-description {
+    color: var(--color-gray-600);
+    margin: 0;
+  }
+
+  .compact .form-header {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .compact .form-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-1);
+  }
+
+  .compact .form-description {
+    font-size: 0.875rem;
+  }
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+
+  .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+
+  .form-input {
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background: white;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .form-input::placeholder {
+    color: var(--color-gray-400);
+  }
+
+  .checkbox-group {
+    margin: var(--spacing-2) 0;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-3);
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+    line-height: 1.5;
+  }
+
+  .checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkbox-custom {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--color-gray-300);
+    border-radius: 3px;
+    background: white;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    margin-top: 2px;
+    position: relative;
+  }
+
+  .checkbox-input:checked + .checkbox-custom {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .checkbox-input:checked + .checkbox-custom::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    width: 4px;
+    height: 8px;
+    border: 2px solid white;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+  }
+
+  .checkbox-text {
+    flex: 1;
+  }
+
+  .privacy-link {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .privacy-link:hover {
+    text-decoration: underline;
+  }
+
+  .form-submit {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-message {
+    padding: var(--spacing-3) var(--spacing-4);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: var(--spacing-4);
+  }
+
+  .form-message.success {
+    background: #ECFDF5;
+    color: var(--color-success);
+    border: 1px solid #A7F3D0;
+  }
+
+  .form-message.error {
+    background: #FEF2F2;
+    color: var(--color-error);
+    border: 1px solid #FECACA;
+  }
+
+  @media (max-width: 768px) {
+    .email-form-container {
+      padding: var(--spacing-6);
+    }
+
+    .compact {
+      padding: var(--spacing-4);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const forms = document.querySelectorAll('.email-form');
+    
+    forms.forEach(form => {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('.form-submit');
+        const submitText = form.querySelector('.submit-text');
+        const loadingSpinner = form.querySelector('.loading-spinner');
+        const messageDiv = form.querySelector('.form-message');
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.style.opacity = '0';
+        loadingSpinner.style.display = 'block';
+        
+        try {
+          // Simulate API call
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          
+          // Show success message
+          messageDiv.textContent = 'Thanks for subscribing! Check your email for confirmation.';
+          messageDiv.className = 'form-message success';
+          messageDiv.style.display = 'block';
+          
+          // Reset form
+          form.reset();
+          
+        } catch (error) {
+          // Show error message
+          messageDiv.textContent = 'Something went wrong. Please try again.';
+          messageDiv.className = 'form-message error';
+          messageDiv.style.display = 'block';
+        } finally {
+          // Reset button state
+          submitBtn.disabled = false;
+          submitText.style.opacity = '1';
+          loadingSpinner.style.display = 'none';
+          
+          // Hide message after 5 seconds
+          setTimeout(() => {
+            messageDiv.style.display = 'none';
+          }, 5000);
+        }
+      });
+    });
+  });
+</script>

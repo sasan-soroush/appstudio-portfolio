@@ -1,0 +1,180 @@
+---
+export interface Props {
+  variant?: 'studio' | 'app';
+  appName?: string;
+}
+
+const { variant = 'studio', appName } = Astro.props;
+---
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-brand">
+        {variant === 'studio' ? (
+          <a href="/" class="logo">
+            <div class="logo-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect width="32" height="32" rx="8" fill="url(#gradient)" />
+                <path d="M8 12h16v8H8z" fill="white" opacity="0.8" />
+                <path d="M10 10h12v4H10z" fill="white" />
+                <defs>
+                  <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                    <stop stop-color="var(--color-primary)" />
+                    <stop offset="1" stop-color="var(--color-secondary)" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="logo-text">AppStudio</span>
+          </a>
+        ) : (
+          <a href="/" class="logo app-logo">
+            <span class="logo-text">{appName}</span>
+          </a>
+        )}
+      </div>
+      
+      <div class="nav-links">
+        {variant === 'studio' ? (
+          <>
+            <a href="#apps" class="nav-link">Apps</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </>
+        ) : (
+          <>
+            <a href="/" class="nav-link">Studio</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#download" class="nav-link">Download</a>
+          </>
+        )}
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-gray-200);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-4) 0;
+  }
+
+  .nav-brand {
+    flex-shrink: 0;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    text-decoration: none;
+    color: var(--color-gray-800);
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .logo-icon {
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-weight: 700;
+  }
+
+  .app-logo .logo-text {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--color-gray-600);
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    transition: width 0.2s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-2);
+  }
+
+  .mobile-menu-btn span {
+    width: 20px;
+    height: 2px;
+    background: var(--color-gray-600);
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
+</script>

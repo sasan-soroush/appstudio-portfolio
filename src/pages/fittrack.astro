@@ -1,0 +1,761 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import EmailForm from '../components/EmailForm.astro';
+---
+
+<Layout title="FitTrack Elite - AI-Powered Fitness Tracking" description="Transform your fitness journey with FitTrack Elite's AI-powered workout recommendations and comprehensive health tracking. Download now on iOS App Store.">
+  <Header variant="app" appName="FitTrack Elite" />
+  
+  <!-- Hero Section -->
+  <section class="app-hero fittrack-hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="app-badge">
+            <div class="badge-icon fittrack-gradient">
+              <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                <path d="M15.5 5H13.5L11.5 3C11.2 2.7 10.8 2.7 10.5 3L8.5 5H6.5C5.4 5 4.5 5.9 4.5 7V19C4.5 20.1 5.4 21 6.5 21H17.5C18.6 21 19.5 20.1 19.5 19V7C19.5 5.9 18.6 5 17.5 5H15.5ZM12 18C9.8 18 8 16.2 8 14S9.8 10 12 10S16 11.8 16 14S14.2 18 12 18ZM12 12C10.9 12 10 12.9 10 14S10.9 16 12 16S14 15.1 14 14S13.1 12 12 12Z"/>
+              </svg>
+            </div>
+            <div>
+              <h1 class="app-title">FitTrack Elite</h1>
+              <p class="app-subtitle">AI-Powered Fitness Tracking</p>
+            </div>
+          </div>
+          
+          <p class="hero-description">
+            Revolutionary fitness tracking with AI-powered workout recommendations, nutrition insights, 
+            and comprehensive health analytics. Your complete fitness companion for achieving your goals.
+          </p>
+          
+          <div class="app-stats">
+            <div class="stat-item">
+              <span class="stat-number">4.7</span>
+              <div class="star-rating">
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <span class="stat-label">1M+ Reviews</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1M+</span>
+              <span class="stat-label">Downloads</span>
+            </div>
+          </div>
+          
+          <div class="download-buttons">
+            <a href="#" class="app-store-btn">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="60">
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="phone-showcase">
+            <img src="https://images.pexels.com/photos/4327024/pexels-photo-4327024.jpeg?auto=compress&cs=tinysrgb&w=400&h=800&fit=crop" alt="FitTrack Elite Interface" class="app-screenshot">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Smart Fitness Technology</h2>
+        <p class="text-lg text-gray">AI-powered features to optimize your fitness journey</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon fittrack-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
+            </svg>
+          </div>
+          <h3>AI Workout Plans</h3>
+          <p>Personalized training programs that adapt to your progress and preferences in real-time.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon fittrack-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 12C14.21 12 16 10.21 16 8S14.21 4 12 4 8 5.79 8 8 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"/>
+            </svg>
+          </div>
+          <h3>Health Analytics</h3>
+          <p>Comprehensive insights into your fitness metrics, progress trends, and health patterns.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon fittrack-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12S6.47 22 11.99 22C17.52 22 22 17.52 22 12S17.52 2 11.99 2ZM18.92 8H15.97C15.65 6.75 15.19 5.55 14.59 4.44C16.43 5.07 17.96 6.35 18.92 8ZM12 4.04C12.83 5.24 13.48 6.57 13.91 8H10.09C10.52 6.57 11.17 5.24 12 4.04ZM4.26 14C4.1 13.36 4 12.69 4 12S4.1 10.64 4.26 10H7.64C7.56 10.66 7.5 11.32 7.5 12S7.56 13.34 7.64 14H4.26ZM5.08 16H8.03C8.35 17.25 8.81 18.45 9.41 19.56C7.57 18.93 6.04 17.65 5.08 16ZM8.03 8H5.08C6.04 6.35 7.57 5.07 9.41 4.44C8.81 5.55 8.35 6.75 8.03 8ZM12 19.96C11.17 18.76 10.52 17.43 10.09 16H13.91C13.48 17.43 12.83 18.76 12 19.96ZM14.34 14H9.66C9.57 13.34 9.5 12.68 9.5 12S9.57 10.66 9.66 10H14.34C14.43 10.66 14.5 11.32 14.5 12S14.43 13.34 14.34 14ZM14.59 19.56C15.19 18.45 15.65 17.25 15.97 16H18.92C17.96 17.65 16.43 18.93 14.59 19.56ZM16.36 14C16.44 13.34 16.5 12.68 16.5 12S16.44 10.66 16.36 10H19.74C19.9 10.64 20 11.31 20 12S19.9 13.36 19.74 14H16.36Z"/>
+            </svg>
+          </div>
+          <h3>Nutrition Tracking</h3>
+          <p>Smart meal logging with barcode scanning and macro tracking for optimal nutrition.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon fittrack-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17M2 12L12 17L22 12"/>
+            </svg>
+          </div>
+          <h3>Social Challenges</h3>
+          <p>Connect with friends, join challenges, and stay motivated with community support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fitness Goals Section -->
+  <section class="section bg-gradient">
+    <div class="container">
+      <div class="goals-content">
+        <div class="goals-text">
+          <h2>Achieve Your Fitness Goals</h2>
+          <p class="text-lg">
+            Whether you're just starting your fitness journey or you're an experienced athlete, 
+            FitTrack Elite adapts to your needs and helps you reach new heights.
+          </p>
+          
+          <div class="goals-list">
+            <div class="goal-item">
+              <div class="goal-icon fittrack-gradient">
+                <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Weight Management</h4>
+                <p>Smart calorie tracking and personalized meal plans for healthy weight goals</p>
+              </div>
+            </div>
+            
+            <div class="goal-item">
+              <div class="goal-icon fittrack-gradient">
+                <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Strength Building</h4>
+                <p>Progressive overload tracking and form analysis for maximum muscle growth</p>
+              </div>
+            </div>
+            
+            <div class="goal-item">
+              <div class="goal-icon fittrack-gradient">
+                <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Endurance Training</h4>
+                <p>Heart rate zones and VO2 max tracking for optimal cardiovascular fitness</p>
+              </div>
+            </div>
+            
+            <div class="goal-item">
+              <div class="goal-icon fittrack-gradient">
+                <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Recovery Optimization</h4>
+                <p>Sleep tracking and recovery metrics to prevent overtraining and injury</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="goals-visual">
+          <img src="https://images.pexels.com/photos/416809/pexels-photo-416809.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Fitness transformation results" class="goals-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Proven Results</h2>
+        <p class="text-lg text-gray">Real data from our fitness community</p>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon fittrack-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
+            </svg>
+          </div>
+          <h3 class="stat-number">87%</h3>
+          <p class="stat-description">Users reach their fitness goals within 3 months</p>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon fittrack-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17M2 12L12 17L22 12"/>
+            </svg>
+          </div>
+          <h3 class="stat-number">2.5M</h3>
+          <p class="stat-description">Workouts completed through our platform</p>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon fittrack-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 12C14.21 12 16 10.21 16 8S14.21 4 12 4 8 5.79 8 8 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"/>
+            </svg>
+          </div>
+          <h3 class="stat-number">15 lbs</h3>
+          <p class="stat-description">Average weight loss in first 90 days</p>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon fittrack-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2Z"/>
+            </svg>
+          </div>
+          <h3 class="stat-number">94%</h3>
+          <p class="stat-description">User satisfaction rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-gradient">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Success Stories</h2>
+        <p class="text-lg text-gray">Real transformations from our community</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <div class="star-rating">
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "Lost 30 pounds in 4 months! The AI recommendations kept me motivated and the nutrition tracking made all the difference."
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Jessica Williams" class="author-avatar">
+            <div>
+              <h4>Jessica Williams</h4>
+              <p>Lost 30 lbs in 4 months</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <div class="star-rating">
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "The workout plans adapt perfectly to my schedule and fitness level. I've gained so much strength and confidence!"
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Marcus Johnson" class="author-avatar">
+            <div>
+              <h4>Marcus Johnson</h4>
+              <p>Gained 15 lbs muscle</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <div class="star-rating">
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "Perfect for busy moms! The quick workouts fit into my schedule and the nutrition tips are so helpful."
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Rachel Green" class="author-avatar">
+            <div>
+              <h4>Rachel Green</h4>
+              <p>Busy mom of 3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-sm">
+    <div class="container">
+      <EmailForm 
+        title="Join the FitTrack Elite Community"
+        description="Get fitness tips, workout plans, and exclusive health insights"
+        placeholder="Enter your email for fitness updates"
+        buttonText="Start Your Journey"
+      />
+    </div>
+  </section>
+
+  <!-- Download CTA Section -->
+  <section id="download" class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2>Transform Your Fitness Journey Today</h2>
+        <p class="text-xl">
+          Join over 1 million users who have already transformed their health with AI-powered fitness tracking.
+        </p>
+        <div class="download-buttons">
+          <a href="#" class="app-store-btn">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="60">
+          </a>
+        </div>
+        <p class="cta-note">Free to download • Premium AI features available</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer variant="app" />
+</Layout>
+
+<style>
+  .fittrack-gradient {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+
+  .app-hero {
+    padding: var(--spacing-20) 0;
+    background: linear-gradient(135deg, #f0fbff 0%, white 100%);
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+  }
+
+  .app-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .badge-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .app-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--color-gray-800);
+  }
+
+  .app-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    margin: 0;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-gray-600);
+    margin-bottom: var(--spacing-8);
+  }
+
+  .app-stats {
+    display: flex;
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-8);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-1);
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-gray-800);
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+  }
+
+  .star-rating {
+    display: flex;
+    gap: 2px;
+    margin: var(--spacing-1) 0;
+  }
+
+  .download-buttons {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .app-store-btn {
+    transition: transform 0.2s ease;
+  }
+
+  .app-store-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phone-showcase {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background: #1a1a1a;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .app-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-8);
+  }
+
+  .feature-card {
+    text-align: center;
+    padding: var(--spacing-6);
+  }
+
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-4);
+  }
+
+  .feature-card h3 {
+    margin-bottom: var(--spacing-3);
+    color: var(--color-gray-800);
+  }
+
+  .feature-card p {
+    color: var(--color-gray-600);
+    line-height: 1.6;
+  }
+
+  .goals-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+  }
+
+  .goals-text h2 {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .goals-list {
+    margin-top: var(--spacing-8);
+  }
+
+  .goal-item {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+    align-items: flex-start;
+  }
+
+  .goal-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .goal-item h4 {
+    margin-bottom: var(--spacing-1);
+    color: var(--color-gray-800);
+    font-size: 1rem;
+  }
+
+  .goal-item p {
+    margin: 0;
+    color: var(--color-gray-600);
+    font-size: 0.875rem;
+  }
+
+  .goals-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-6);
+  }
+
+  .stat-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-lg);
+  }
+
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-4);
+  }
+
+  .stat-card .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-gray-800);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .stat-description {
+    color: var(--color-gray-600);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+  }
+
+  .testimonial-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-lg);
+  }
+
+  .testimonial-rating {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .testimonial-text {
+    font-style: italic;
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-6);
+    line-height: 1.6;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .testimonial-author h4 {
+    margin: 0;
+    color: var(--color-gray-800);
+    font-size: 0.875rem;
+  }
+
+  .testimonial-author p {
+    margin: 0;
+    color: var(--color-gray-500);
+    font-size: 0.75rem;
+  }
+
+  .cta-section {
+    padding: var(--spacing-20) 0;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    margin-bottom: var(--spacing-4);
+    color: white;
+  }
+
+  .cta-content p {
+    margin-bottom: var(--spacing-8);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .cta-note {
+    margin-top: var(--spacing-4);
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+      text-align: center;
+    }
+
+    .app-title {
+      font-size: 2rem;
+    }
+
+    .phone-showcase {
+      width: 250px;
+      height: 500px;
+    }
+
+    .app-badge {
+      justify-content: center;
+    }
+
+    .app-stats {
+      justify-content: center;
+    }
+
+    .download-buttons {
+      justify-content: center;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .goals-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

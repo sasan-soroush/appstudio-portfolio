@@ -1,0 +1,661 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import EmailForm from '../components/EmailForm.astro';
+---
+
+<Layout title="MindSpace - Meditation & Mindfulness" description="Find inner peace with MindSpace's personalized meditation sessions and mindfulness exercises. Download now on iOS App Store.">
+  <Header variant="app" appName="MindSpace" />
+  
+  <!-- Hero Section -->
+  <section class="app-hero mindspace-hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="app-badge">
+            <div class="badge-icon mindspace-gradient">
+              <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9.5L21 9ZM3 7V9L9 9.5V7.5L3 7ZM15 7.5V16C15 17.1 14.1 18 13 18H11C9.9 18 9 17.1 9 16V7.5C9 6.4 9.9 5.5 11 5.5H13C14.1 5.5 15 6.4 15 7.5Z"/>
+              </svg>
+            </div>
+            <div>
+              <h1 class="app-title">MindSpace</h1>
+              <p class="app-subtitle">Meditation & Mindfulness</p>
+            </div>
+          </div>
+          
+          <p class="hero-description">
+            Discover inner peace and reduce stress with guided meditation sessions, breathing exercises, 
+            and personalized mindfulness programs tailored to your lifestyle.
+          </p>
+          
+          <div class="app-stats">
+            <div class="stat-item">
+              <span class="stat-number">4.8</span>
+              <div class="star-rating">
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <span class="stat-label">250K+ Reviews</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">250K+</span>
+              <span class="stat-label">Downloads</span>
+            </div>
+          </div>
+          
+          <div class="download-buttons">
+            <a href="#" class="app-store-btn">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="60">
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="phone-showcase">
+            <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=400&h=800&fit=crop" alt="MindSpace Interface" class="app-screenshot">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Mindfulness Made Simple</h2>
+        <p class="text-lg text-gray">Tools to help you find balance in daily life</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon mindspace-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 3V1M12 23V21M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"/>
+            </svg>
+          </div>
+          <h3>Guided Meditations</h3>
+          <p>Expert-led sessions from 3 to 60 minutes for beginners to advanced practitioners.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon mindspace-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M4 10V16C4 20.42 7.58 24 12 24S20 20.42 20 16V10C20 4.48 16.84 0 12 0S4 4.48 4 10Z"/>
+            </svg>
+          </div>
+          <h3>Breathing Exercises</h3>
+          <p>Science-based breathing techniques to reduce anxiety and improve focus instantly.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon mindspace-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M9 11H7V9H9V11ZM13 11H11V9H13V11ZM17 11H15V9H17V11ZM19 4H18V2H16V4H8V2H6V4H5C3.89 4 3.01 4.9 3.01 6L3 20C3 21.1 3.89 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20Z"/>
+            </svg>
+          </div>
+          <h3>Progress Tracking</h3>
+          <p>Monitor your meditation journey with detailed statistics and mindfulness streaks.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon mindspace-gradient">
+            <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
+            </svg>
+          </div>
+          <h3>Sleep Stories</h3>
+          <p>Calming bedtime stories and sleep sounds to help you unwind and rest better.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Benefits Section -->
+  <section class="section bg-gradient">
+    <div class="container">
+      <div class="benefits-content">
+        <div class="benefits-text">
+          <h2>Transform Your Well-being</h2>
+          <p class="text-lg">
+            Join millions who have discovered the life-changing benefits of regular meditation practice.
+          </p>
+          
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon mindspace-gradient">
+                <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Reduce Stress & Anxiety</h4>
+                <p>Lower cortisol levels and find calm in chaotic moments</p>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon mindspace-gradient">
+                <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Improve Focus</h4>
+                <p>Enhance concentration and mental clarity for better productivity</p>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon mindspace-gradient">
+                <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Better Sleep Quality</h4>
+                <p>Fall asleep faster and enjoy deeper, more restorative rest</p>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon mindspace-gradient">
+                <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Emotional Balance</h4>
+                <p>Develop resilience and emotional intelligence for life's challenges</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="benefits-visual">
+          <img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Peaceful meditation scene" class="benefits-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Life-Changing Stories</h2>
+        <p class="text-lg text-gray">Real experiences from our meditation community</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <div class="star-rating">
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "MindSpace helped me overcome years of anxiety. The guided meditations are incredibly soothing and effective."
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/3771117/pexels-photo-3771117.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Lisa Thompson" class="author-avatar">
+            <div>
+              <h4>Lisa Thompson</h4>
+              <p>Teacher, New York</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <div class="star-rating">
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "The sleep stories are magical! I haven't had trouble falling asleep since I started using MindSpace."
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/3758105/pexels-photo-3758105.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="David Kim" class="author-avatar">
+            <div>
+              <h4>David Kim</h4>
+              <p>Software Engineer</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <div class="star-rating">
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24" class="star">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "Perfect for busy professionals. The short sessions fit perfectly into my hectic schedule and really make a difference."
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Sarah Martinez" class="author-avatar">
+            <div>
+              <h4>Sarah Martinez</h4>
+              <p>Marketing Executive</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-sm">
+    <div class="container">
+      <EmailForm 
+        title="Join the MindSpace Community"
+        description="Get meditation tips, wellness insights, and exclusive content"
+        placeholder="Enter your email for mindfulness updates"
+        buttonText="Find Your Peace"
+      />
+    </div>
+  </section>
+
+  <!-- Download CTA Section -->
+  <section id="download" class="cta-section">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2>Start Your Mindfulness Journey Today</h2>
+        <p class="text-xl">
+          Take the first step towards inner peace and mental well-being with MindSpace.
+        </p>
+        <div class="download-buttons">
+          <a href="#" class="app-store-btn">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="60">
+          </a>
+        </div>
+        <p class="cta-note">Free meditation sessions • Premium content available</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer variant="app" />
+</Layout>
+
+<style>
+  .mindspace-gradient {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+
+  .app-hero {
+    padding: var(--spacing-20) 0;
+    background: linear-gradient(135deg, #fef7ff 0%, white 100%);
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+  }
+
+  .app-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .badge-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .app-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--color-gray-800);
+  }
+
+  .app-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-gray-600);
+    margin: 0;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--color-gray-600);
+    margin-bottom: var(--spacing-8);
+  }
+
+  .app-stats {
+    display: flex;
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-8);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-1);
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-gray-800);
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+  }
+
+  .star-rating {
+    display: flex;
+    gap: 2px;
+    margin: var(--spacing-1) 0;
+  }
+
+  .download-buttons {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .app-store-btn {
+    transition: transform 0.2s ease;
+  }
+
+  .app-store-btn:hover {
+    transform: scale(1.05);
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phone-showcase {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background: #1a1a1a;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .app-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-8);
+  }
+
+  .feature-card {
+    text-align: center;
+    padding: var(--spacing-6);
+  }
+
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-4);
+  }
+
+  .feature-card h3 {
+    margin-bottom: var(--spacing-3);
+    color: var(--color-gray-800);
+  }
+
+  .feature-card p {
+    color: var(--color-gray-600);
+    line-height: 1.6;
+  }
+
+  .benefits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-12);
+    align-items: center;
+  }
+
+  .benefits-text h2 {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .benefits-list {
+    margin-top: var(--spacing-8);
+  }
+
+  .benefit-item {
+    display: flex;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+    align-items: flex-start;
+  }
+
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .benefit-item h4 {
+    margin-bottom: var(--spacing-1);
+    color: var(--color-gray-800);
+    font-size: 1rem;
+  }
+
+  .benefit-item p {
+    margin: 0;
+    color: var(--color-gray-600);
+    font-size: 0.875rem;
+  }
+
+  .benefits-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+  }
+
+  .testimonial-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-6);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-lg);
+  }
+
+  .testimonial-rating {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .testimonial-text {
+    font-style: italic;
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-6);
+    line-height: 1.6;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .testimonial-author h4 {
+    margin: 0;
+    color: var(--color-gray-800);
+    font-size: 0.875rem;
+  }
+
+  .testimonial-author p {
+    margin: 0;
+    color: var(--color-gray-500);
+    font-size: 0.75rem;
+  }
+
+  .cta-section {
+    padding: var(--spacing-20) 0;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    margin-bottom: var(--spacing-4);
+    color: white;
+  }
+
+  .cta-content p {
+    margin-bottom: var(--spacing-8);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .cta-note {
+    margin-top: var(--spacing-4);
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+      text-align: center;
+    }
+
+    .app-title {
+      font-size: 2rem;
+    }
+
+    .phone-showcase {
+      width: 250px;
+      height: 500px;
+    }
+
+    .app-badge {
+      justify-content: center;
+    }
+
+    .app-stats {
+      justify-content: center;
+    }
+
+    .download-buttons {
+      justify-content: center;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .benefits-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
